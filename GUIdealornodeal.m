@@ -428,3 +428,29 @@ handles.boxesleft=handles.boxesleft - 1;
 openboxp(handles, 17);
 handles.boxes(17)=0;
 guidata(hObject, handles)
+
+
+% --- Executes on button press in deal.
+function deal_Callback(hObject, eventdata, handles)
+% hObject    handle to deal (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in nodeal.
+function nodeal_Callback(hObject, eventdata, handles)
+% hObject    handle to nodeal (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+set(findall(GUIdealornodeal, '-property', 'visible'),'visible','on');
+set(findall(GUIdealornodeal, '-property', 'enable'),'enable','on');
+set(handles.nodeal,'visible','off');
+set(handles.nodeal,'enable','off');
+set(handles.deal,'visible','off');
+set(handles.deal,'enable','off');
+set(handles.offertext, 'enable','off')
+set(handles.offertext, 'visible','off')
+set(handles.textboxshow, 'visible','off')
+guidata(hObject,handles);
