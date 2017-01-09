@@ -5,7 +5,6 @@ if h.boxesleft==17
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
     set(h.deal, 'visible', 'on');
-    set(findall(GUIdealornodeal, '-property', 'visible'),'visible','off');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
     set(h.offertext, 'enable', 'on');
     set(h.deal, 'enable', 'on');
@@ -19,7 +18,6 @@ elseif h.boxesleft==13
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
     set(h.deal, 'visible', 'on');
-    set(findall(GUIdealornodeal, '-property', 'visible'),'visible','off');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
     set(h.offertext, 'enable', 'on');
     set(h.deal, 'enable', 'on');
@@ -33,7 +31,6 @@ elseif h.boxesleft==9
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
     set(h.deal, 'visible', 'on');
-    set(findall(GUIdealornodeal, '-property', 'visible'),'visible','off');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
     set(h.offertext, 'enable', 'on');
     set(h.deal, 'enable', 'on');
@@ -47,7 +44,6 @@ elseif h.boxesleft==6
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
     set(h.deal, 'visible', 'on');
-    set(findall(GUIdealornodeal, '-property', 'visible'),'visible','off');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
     set(h.offertext, 'enable', 'on');
     set(h.deal, 'enable', 'on');
@@ -61,7 +57,6 @@ elseif h.boxesleft==4
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
     set(h.deal, 'visible', 'on');
-    set(findall(GUIdealornodeal, '-property', 'visible'),'visible','off');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
     set(h.offertext, 'enable', 'on');
     set(h.deal, 'enable', 'on');
@@ -75,7 +70,6 @@ elseif h.boxesleft==3
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
     set(h.deal, 'visible', 'on');
-    set(findall(GUIdealornodeal, '-property', 'visible'),'visible','off');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
     set(h.offertext, 'enable', 'on');
     set(h.deal, 'enable', 'on');
@@ -89,7 +83,6 @@ elseif h.boxesleft==2
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
     set(h.deal, 'visible', 'on');
-    set(findall(GUIdealornodeal, '-property', 'visible'),'visible','off');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
     set(h.offertext, 'enable', 'on');
     set(h.deal, 'enable', 'on');
