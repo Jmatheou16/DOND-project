@@ -69,11 +69,11 @@ handles.boxesleft=22;
 set(handles.dealtext, 'enable', 'off')
 set(handles.dealtext, 'visible', 'off')
 randbox;
-handles.boxes=ans
+handles.boxes=ans;
 handles.yourbox=[];
-handles.offer=0
+handles.offer=0;
 
-
+   
 % Update handles structure
 guidata(hObject, handles);
 
@@ -495,6 +495,7 @@ function deal_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
+handles.deal=1
 set(findall(GUIdealornodeal, '-property', 'enable'),'enable','off');
 set(handles.nodeal,'visible','off');
 set(handles.nodeal,'enable','off');
@@ -506,8 +507,6 @@ set(handles.textboxshow, 'visible','off')
 set(handles.dealtext, 'visible', 'on')
 set(handles.dealtext, 'enable', 'on')
 set(handles.dealtext, 'string', ['Congratulations! You have won £' num2str(handles.offer)]);
-dealtext = axes('units','normalized', ...
-
 
 
 guidata(hObject,handles);
