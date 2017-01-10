@@ -19,7 +19,7 @@ elseif size > 3
         offer = (sum(boxes)+yourbox)/(size+1);
     offer = offer*(randi([55,65])/100);
     offer = round(offer, -2);
-elseif size > 2
+elseif size > 0
         offer = (sum(boxes)+yourbox)/(size+1);
     offer = offer*(randi([60,70])/100);
     offer = round(offer, -2);
