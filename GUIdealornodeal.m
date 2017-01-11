@@ -22,7 +22,7 @@ function varargout = GUIdealornodeal(varargin)
 
 % Edit the above text to modify the response to help GUIdealornodeal
 
-% Last Modified by GUIDE v2.5 29-Dec-2016 22:12:16
+% Last Modified by GUIDE v2.5 09-Jan-2017 20:34:35
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -53,12 +53,27 @@ function GUIdealornodeal_OpeningFcn(hObject, eventdata, handles, varargin)
 % varargin   command line arguments to GUIdealornodeal (see VARARGIN)
 
 % Choose default command line output for GUIdealornodeal
+
+%%displays image background
+ha = axes('units','normalized', ...
+            'position',[0 0 1 1]);
+uistack(ha,'bottom');
+I=imread('background.jpeg');
+hi = imagesc(I)
+colormap gray
+set(ha,'handlevisibility','off', ...
+            'visible','off')
+
 handles.output = hObject;
 handles.boxesleft=22;
+set(handles.dealtext, 'enable', 'off')
+set(handles.dealtext, 'visible', 'off')
 randbox;
 handles.boxes=ans;
 handles.yourbox=[];
+handles.offer=0;
 
+   
 % Update handles structure
 guidata(hObject, handles);
 
@@ -480,6 +495,49 @@ function deal_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
+set(findall(GUIdealornodeal, '-property', 'enable'),'enable','off');
+set(handles.nodeal,'visible','off');
+set(handles.deal,'visible','off');
+set(handles.deal,'enable','off');
+set(handles.offertext, 'visible','off')
+set(handles.textboxshow, 'visible','off')
+set(handles.dealtext, 'visible', 'on')
+set(handles.dealtext, 'enable', 'on')
+set(handles.dealtext, 'string', ['Congratulations! You have won £' num2str(handles.offer)]);
+set(handles.couldhave, 'enable', 'on')
+set(handles.couldhave, 'visible', 'on')
+for i = 1:3
+    set(handles.couldhave, 'string', 'But you could have won.')
+    pause(0.6)
+    set(handles.couldhave, 'string', 'But you could have won..')
+    pause(0.6)
+    set(handles.couldhave, 'string', 'But you could have won...')
+    pause(0.6)
+end
+[y,fs]=audioread('drumroll.wav');
+sound(y,fs)
+pause(5)
+set(handles.textyourbox, 'enable', 'on')
+set(handles.textyourbox, 'string', ['£' num2str(handles.yourbox)])
+set(handles.textyourbox, 'visible', 'on')
+
+if handles.offer>handles.yourbox
+    set(handles.beatbanker, 'enable', 'on')
+    set(findall(GUIdealornodeal, '-property', 'visible'),'visible','off');
+    set(handles.beatbanker, 'visible', 'on')
+elseif handles.offer<handles.yourbox
+    set(handles.unlucky, 'enable', 'on')
+    set(findall(GUIdealornodeal, '-property', 'visible'),'visible','off');
+    set(handles.unlucky, 'visible', 'on')
+end
+
+
+
+
+
+guidata(hObject,handles);
+
+
 
 % --- Executes on button press in nodeal.
 function nodeal_Callback(hObject, eventdata, handles)
@@ -497,5 +555,3 @@ set(handles.offertext, 'enable','off')
 set(handles.offertext, 'visible','off')
 set(handles.textboxshow, 'visible','off')
 guidata(hObject,handles);
-
-
