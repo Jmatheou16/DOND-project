@@ -4,7 +4,6 @@ if h.boxesleft==17
     h.offer=offer;
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
-    set(h.deal, 'visible', 'on');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
     set(h.offertext, 'enable', 'on');
     set(h.deal, 'enable', 'on');
@@ -17,7 +16,6 @@ elseif h.boxesleft==13
     h.offer=offer;
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
-    set(h.deal, 'visible', 'on');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
     set(h.offertext, 'enable', 'on');
     set(h.deal, 'enable', 'on');
@@ -30,7 +28,6 @@ elseif h.boxesleft==10
     h.offer=offer;
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
-    set(h.deal, 'visible', 'on');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
     set(h.offertext, 'enable', 'on');
     set(h.deal, 'enable', 'on');
@@ -43,7 +40,6 @@ elseif h.boxesleft==7
     h.offer=offer;
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
-    set(h.deal, 'visible', 'on');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
     set(h.offertext, 'enable', 'on');
     set(h.deal, 'enable', 'on');
@@ -56,7 +52,6 @@ elseif h.boxesleft==4
     h.offer=offer;
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
-    set(h.deal, 'visible', 'on');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
     set(h.offertext, 'enable', 'on');
     set(h.deal, 'enable', 'on');
@@ -69,7 +64,6 @@ elseif h.boxesleft==1
     h.offer=offer;
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
-    set(h.deal, 'visible', 'on');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
     set(h.offertext, 'enable', 'on');
     set(h.deal, 'enable', 'on');
