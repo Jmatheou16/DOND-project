@@ -22,7 +22,7 @@ function varargout = GUIdealornodeal(varargin)
 
 % Edit the above text to modify the response to help GUIdealornodeal
 
-% Last Modified by GUIDE v2.5 09-Jan-2017 20:34:35
+% Last Modified by GUIDE v2.5 12-Jan-2017 22:26:40
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -66,13 +66,14 @@ set(ha,'handlevisibility','off', ...
 
 handles.output = hObject;
 handles.boxesleft=22;
-
-randbox;
-handles.boxes=ans
-handles.yourbox=[];
 set(handles.dealtext, 'enable', 'off')
 set(handles.dealtext, 'visible', 'off')
+randbox;
+handles.boxes=ans;
+handles.yourbox=[];
+handles.offer=0;
 
+   
 % Update handles structure
 guidata(hObject, handles);
 
@@ -496,15 +497,116 @@ function deal_Callback(hObject, eventdata, handles)
 
 set(findall(GUIdealornodeal, '-property', 'enable'),'enable','off');
 set(handles.nodeal,'visible','off');
-set(handles.nodeal,'enable','off');
 set(handles.deal,'visible','off');
 set(handles.deal,'enable','off');
-set(handles.offertext, 'enable','off')
 set(handles.offertext, 'visible','off')
 set(handles.textboxshow, 'visible','off')
 set(handles.dealtext, 'visible', 'on')
 set(handles.dealtext, 'enable', 'on')
-set(handles.dealtext, 'string', ['Congratulations, you have won £' num2str(offer)]);
+set(handles.dealtext, 'string', ['Congratulations! You have won £' num2str(handles.offer)]);
+set(handles.couldhave, 'enable', 'on')
+set(handles.couldhave, 'visible', 'on')
+for i = 1:3
+    set(handles.couldhave, 'string', 'But you could have won.')
+    pause(0.6)
+    set(handles.couldhave, 'string', 'But you could have won..')
+    pause(0.6)
+    set(handles.couldhave, 'string', 'But you could have won...')
+    pause(0.6)
+end
+[y,fs]=audioread('drumroll.wav');
+sound(y,fs)
+pause(5)
+set(handles.textyourbox, 'enable', 'on')
+set(handles.textyourbox, 'string', ['£' num2str(handles.yourbox)])
+set(handles.textyourbox, 'visible', 'on')
+
+if handles.offer>handles.yourbox
+    
+    set(handles.box1, 'visible', 'off');
+    set(handles.box2, 'visible', 'off');
+    set(handles.box3, 'visible', 'off');
+    set(handles.box4, 'visible', 'off');
+    set(handles.box5, 'visible', 'off');
+    set(handles.box6, 'visible', 'off');
+    set(handles.box7, 'visible', 'off');
+    set(handles.box8, 'visible', 'off');
+    set(handles.box9, 'visible', 'off');
+    set(handles.box10, 'visible', 'off');
+    set(handles.box11, 'visible', 'off');
+    set(handles.box12, 'visible', 'off');
+    set(handles.box13, 'visible', 'off');
+    set(handles.box14, 'visible', 'off');
+    set(handles.box15, 'visible', 'off');
+    set(handles.box16, 'visible', 'off');
+    set(handles.box17, 'visible', 'off');
+    set(handles.box18, 'visible', 'off');
+    set(handles.box19, 'visible', 'off');
+    set(handles.box20, 'visible', 'off');
+    set(handles.box21, 'visible', 'off');
+    set(handles.box22, 'visible', 'off');
+    set(handles.endgame, 'enable', 'off')
+    set(handles.endgame, 'visible', 'off')
+    set(handles.yourboxtext, 'visible', 'off')
+    pause(1)
+    set(handles.couldhave, 'visible', 'off')
+    set(handles.dealtext, 'visible', 'off')
+    set(handles.textyourbox, 'enable', 'off')
+    set(handles.textyourbox, 'visible', 'off')
+    
+   
+   
+    set(handles.beatbanker, 'enable', 'on')
+    set(handles.beatbanker, 'visible', 'on')
+
+elseif handles.offer<handles.yourbox
+    
+    set(handles.box1, 'visible', 'off');
+    set(handles.box2, 'visible', 'off');
+    set(handles.box3, 'visible', 'off');
+    set(handles.box4, 'visible', 'off');
+    set(handles.box5, 'visible', 'off');
+    set(handles.box6, 'visible', 'off');
+    set(handles.box7, 'visible', 'off');
+    set(handles.box8, 'visible', 'off');
+    set(handles.box9, 'visible', 'off');
+    set(handles.box10, 'visible', 'off');
+    set(handles.box11, 'visible', 'off');
+    set(handles.box12, 'visible', 'off');
+    set(handles.box13, 'visible', 'off');
+    set(handles.box14, 'visible', 'off');
+    set(handles.box15, 'visible', 'off');
+    set(handles.box16, 'visible', 'off');
+    set(handles.box17, 'visible', 'off');
+    set(handles.box18, 'visible', 'off');
+    set(handles.box19, 'visible', 'off');
+    set(handles.box20, 'visible', 'off');
+    set(handles.box21, 'visible', 'off');
+    set(handles.box22, 'visible', 'off');
+    set(handles.endgame, 'enable', 'off')
+    set(handles.endgame, 'visible', 'off')
+    set(handles.yourboxtext, 'visible', 'off')
+    
+    pause(1)
+    set(handles.dealtext, 'visible', 'off')
+    set(handles.couldhave, 'visible', 'off')
+    set(handles.textyourbox, 'enable', 'off')
+    set(handles.textyourbox, 'visible', 'off')
+  
+    
+  
+ 
+   
+    
+   
+   
+    set(handles.unlucky, 'enable', 'on')
+    set(handles.unlucky, 'visible', 'on')
+end
+
+
+
+
 
 guidata(hObject,handles);
 
