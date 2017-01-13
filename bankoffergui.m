@@ -15,6 +15,7 @@ if h.boxesleft==17
 elseif h.boxesleft==13
         offer = bankersoffer(h.boxes, h.boxesleft, h.yourbox);
     h.offer=offer;
+    offeraction
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
@@ -27,6 +28,7 @@ elseif h.boxesleft==13
 elseif h.boxesleft==10
         offer = bankersoffer(h.boxes, h.boxesleft, h.yourbox);
     h.offer=offer;
+    offeraction
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
@@ -38,7 +40,8 @@ elseif h.boxesleft==10
     set(h.nodeal, 'visible', 'on');
 elseif h.boxesleft==7
         offer = bankersoffer(h.boxes, h.boxesleft, h.yourbox);
-    h.offer=offer;
+    h.offer=offer
+    offeraction
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
@@ -51,6 +54,7 @@ elseif h.boxesleft==7
 elseif h.boxesleft==4
         offer = bankersoffer(h.boxes, h.boxesleft, h.yourbox);
     h.offer=offer;
+    offeraction
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
@@ -63,6 +67,7 @@ elseif h.boxesleft==4
 elseif h.boxesleft==1
         offer = bankersoffer(h.boxes, h.boxesleft, h.yourbox);
     h.offer=offer;
+    offeraction
     set(h.offertext, 'string', ['Bank offers: £' num2str(offer)]);
     set(h.offertext, 'visible', 'on');
     set(findall(GUIdealornodeal, '-property', 'enable'),'enable', 'off');
