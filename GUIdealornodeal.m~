@@ -507,15 +507,7 @@ set(handles.dealtext, 'string', ['Congratulations! You have won £' num2str(handl
 set(handles.couldhave, 'enable', 'on')
 set(handles.couldhave, 'visible', 'on')
 
-set(handles.couldhave, 'string', 'But you could have won.')
-    pause(0.6)
-[y,fs]=audioread('drumroll.wav');
-sound(y,fs)
-set(handles.couldhave, 'string', 'But you could have won..')
-    pause(0.6)
-    set(handles.couldhave, 'string', 'But you could have won...')
-    pause(0.6)
-    for i = 1:2
+for i = 1:3
     set(handles.couldhave, 'string', 'But you could have won.')
     pause(0.6)
     set(handles.couldhave, 'string', 'But you could have won..')
@@ -523,8 +515,9 @@ set(handles.couldhave, 'string', 'But you could have won..')
     set(handles.couldhave, 'string', 'But you could have won...')
     pause(0.6)
 end
-
-pause(0.1)
+[y,fs]=audioread('drumroll.wav');
+sound(y,fs)
+pause(5)
 set(handles.textyourbox, 'enable', 'on')
 set(handles.textyourbox, 'string', ['£' num2str(handles.yourbox)])
 set(handles.textyourbox, 'visible', 'on')
