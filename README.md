@@ -2,8 +2,6 @@ Group ‘OllieJoeTomWill’ Project Report - Deal or no Deal
 
 Members: • Ollie Wise • William Rennicks • Joachim Matheou • Thomas Talbert
 
-To run the game on a PC with windows, you need to download the whole zip file from the windows version branch. All of the sound files and images are there for the game to work. It can then be copied into a folder of choice. This zip file can then be unzipped, and then run from matlab. To start the game, run the homescreen.m file.
-
 Topic/Motivation: We decided on the game show ‘Deal or no Deal’ for our group project topic. Drawing inspiration from a similar project (Who wants to be a Millionaire) completed last year. It was complex enough to apply various new techniques and skills that we’d learnt ourselves, yet still accommodate what we gained from the assignments. Above all, we chose ‘Deal or No Deal’ because once all the work was finished, there would be a fully-functioning engaging game for us to play and enjoy.
 
 Methodology: Since we were making a game we were keen to use Graphical User Interface (GUI). The first parts of building the game involved creating a function to randomize the boxes and a function to generate an offer from the banker. We had to build these into the GUI. Once the game was working a lot of time was spent customizing and experimenting to try and make the game aesthetically pleasing to play.
