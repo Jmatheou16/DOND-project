@@ -87,7 +87,17 @@ function playgame_Callback(hObject, eventdata, handles)
 % hObject    handle to playgame (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+set(handles.axes1, 'visible', 'on')
+set(handles.axes2, 'visible', 'on')
+axes(handles.axes1)
+imshow('noele.jpg')
+axes(handles.axes2)
+imshow('speech.png')
+[y,fs]=audioread('goodluck.wav');
+sound(y,fs);
+pause(3)
 run GUIdealornodeal.m
+
 
 
 % --- Executes on button press in instructions.
