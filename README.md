@@ -17,6 +17,7 @@ Results/improvements: Everyone in the group is very proud of the project, seeing
 To run the game on a PC with windows, you simply need to download the whole zip file from the master branch. All of the sound files and images are there for the game to work seamlessly. It can then be copied into a folder of choice. This zip file can then be unzipped, and with all files open in the workspace, then be run from matlab itself . To start the game, proceed to running the homescreen.m file.
 
 Marks: • Everyone contributed, but some had greater involvement in more difficult areas of the project. 
+
 Ollie Wise – 28% 
 William Rennicks – 26% 
 Joachim Matheou – 23%
