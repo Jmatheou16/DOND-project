@@ -4,7 +4,7 @@ Group ‘OllieJoeTomWill’ Project Report - Deal or no Deal
 
 Members: • Ollie Wise • William Rennicks • Joachim Matheou • Thomas Talbert
 
-To run the game on a PC with windows, you need to download the whole zip file from the windows version branch. All of the sound files and images are there for the game to work. It can then be copied into a folder of choice. This zip file can be unzipped, and then run from matlab. To start the game, run the homescreen.m file.
+To run the game on a PC with windows, you need to download the whole zip file from the master branch. All of the sound files and images are there for the game to work. It can then be copied into a folder of choice. This zip file can be unzipped, and then run from matlab. To start the game, run the homescreen.m file.
 
 Topic/Motivation: We decided on the game show ‘Deal or no Deal’ for our group project topic. Drawing inspiration from a similar project (Who wants to be a Millionaire) completed last year. It was complex enough to apply various new techniques and skills that we’d learnt ourselves, yet still accommodate what we gained from the assignments. Above all, we chose ‘Deal or No Deal’ because once all the work was finished, there would be a fully-functioning engaging game for us to play and enjoy.
 
@@ -16,4 +16,5 @@ Challenges: Throughout writing the code we encountered many challenges, a lot mo
 
 Results/improvements: Everyone in the group is very proud of the project, seeing it turn from a few ideas and drawings to a working game is extremely satisfying. If we had more time, there were a few ideas we were unable to implement into our game. Most of these involved using images to generate animations, we also tried including a gif. At the start of our project we wanted to be able to give the option to play the game again without closing the figure and re running but we couldn’t manage.
 
-Marks: • Everyone contributed, but some had greater involvement in more difficult areas of the project. Ollie Wise – 28% William Rennicks – 26% Joachim Matheou – 23% Thomas Talbert – 23%
+Marks: • Everyone contributed, but some had greater involvement in more difficult areas of the project. 
+Ollie Wise – 28% William Rennicks – 26% Joachim Matheou – 23% Thomas Talbert – 23%
