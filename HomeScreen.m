@@ -58,7 +58,7 @@ ha = axes('units','normalized', ...
             'position',[0 0 1 1]);
 uistack(ha,'bottom');
 I=imread('homeimage.jpeg');
-hi = imagesc(I)
+hi = imagesc(I);
 colormap gray
 set(ha,'handlevisibility','off', ...
             'visible','off')
@@ -88,10 +88,10 @@ function playgame_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 set(handles.axes1, 'visible', 'on')
-set(handles.axes2, 'visible', 'on')
 axes(handles.axes1)
 imshow('noele.jpg')
 axes(handles.axes2)
+set(handles.axes2, 'visible', 'on')
 imshow('speech.png')
 [y,fs]=audioread('goodluck.wav');
 sound(y,fs);
